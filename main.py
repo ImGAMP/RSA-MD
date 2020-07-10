@@ -5,7 +5,7 @@ Codigo RSA
 '''
 Funciones
 '''
-def gcd(a, b):
+def mcd(a, b):
     while b != 0:
         c = a % b
         a = b
@@ -19,7 +19,7 @@ def modinv(a, m):
 def coprimes(a):
     l = []
     for x in range(2, a):
-        if gcd(a, x) == 1 and modinv(x,phi) != None:
+        if mcd(a, x) == 1 and modinv(x,phi) != None:
             l.append(x)
     for x in l:
         if x == modinv(x,phi):
